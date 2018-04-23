@@ -1,4 +1,4 @@
-import { connect } from './../../index';
+import connect from './../../lib/connect';
 import * as selectors from './../data/selectors';
 import * as actions from './../data/actions';
 
