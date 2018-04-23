@@ -1,2 +1,4 @@
 # fluxo
-Vanilla FLUX
+A Vanilla FLUX library.
+
+Work in progress...
