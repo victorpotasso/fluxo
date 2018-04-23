@@ -1,1 +1,2 @@
 export const ACTION_UPDATE = 'ACTION_UPDATE';
+export const ACTION_INCREMENT = 'ACTION_INCREMENT';
