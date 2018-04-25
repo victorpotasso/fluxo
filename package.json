@@ -18,6 +18,7 @@
   "homepage": "https://github.com/victorpotasso/fluxo#readme",
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
+    "lodash": "^4.17.10",
     "parcel-bundler": "^1.7.1"
   }
 }

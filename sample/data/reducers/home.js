@@ -2,7 +2,9 @@ import * as types from './../types';
 
 const initalState = {
   sample: 'initial',
-  count: 0,
+  counter: {
+    count: 0,
+  }
 }
 
 function homeReducer(state = initalState, action) {
@@ -20,7 +22,9 @@ function homeReducer(state = initalState, action) {
         {},
         state,
         {
-          count: state.count + 1,
+          counter: {
+            count: state.counter.count + 1,
+          }
         }
       );
     default: return state;
