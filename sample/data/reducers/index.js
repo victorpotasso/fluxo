@@ -1,4 +1,4 @@
-import { combineReducers } from './../../../index';
+import { combineReducers } from './../../../lib';
 import homeReducer from './home';
 import testReducer from './test';
 

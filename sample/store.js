@@ -1,4 +1,4 @@
-import createStore from './../lib/createStore';
+import { createStore } from './../lib';
 import reducers from './data/reducers';
 import middlewares from './data/middlewares';
 

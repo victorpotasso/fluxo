@@ -2,9 +2,11 @@
   "name": "fluxo",
   "version": "0.0.1",
   "description": "vanilla flux",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "start": "parcel sample/index.html  --open"
+    "start": "parcel sample/index.html  --open",
+    "build": "babel ./lib --out-dir ./build",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/victorpotasso/fluxo#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "lodash": "^4.17.10",
     "parcel-bundler": "^1.7.1"
