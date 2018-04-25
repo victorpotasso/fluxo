@@ -23,14 +23,14 @@ class HomeView {
 
   render() {
     console.log('Home::render props', this.props);
-    this.title.textContent = this.props['home.sample'];
-    this.count.textContent = this.props['home.counter.count'];
+    this.title.textContent = this.props.value1;
+    this.count.textContent = this.props.value2;
   }
 }
 
 const mapStateToProps = state => ({
-  ['home.sample']: `Sample: ${selectors.sample(state)}`,
-  ['home.counter.count']: selectors.count(state),
+  value1: `Sample: ${selectors.sample(state)}`,
+  value2: selectors.count(state),
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
