@@ -1,4 +1,4 @@
 import store from './store';
-import Home from './views/home';
+import Home from './containers/home';
 
 const home = new Home('section#home-view');

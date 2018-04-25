@@ -15,19 +15,22 @@ class HomeView {
 
   onClick() {
     if (this.props.update) {
-      this.props.update('FUCK YEAH');
+      const randomString = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10).toUpperCase();
+      this.props.update(randomString);
       this.props.increment();
     }
   }
+
   render() {
-    this.title.textContent = this.props.sample;
-    this.count.textContent = this.props['counter.count'];
+    console.log('Home::render props', this.props);
+    this.title.textContent = this.props['home.sample'];
+    this.count.textContent = this.props['home.counter.count'];
   }
 }
 
 const mapStateToProps = state => ({
-  sample: selectors.sample(state),
-  'counter.count': selectors.count(state),
+  ['home.sample']: `Sample: ${selectors.sample(state)}`,
+  ['home.counter.count']: selectors.count(state),
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
