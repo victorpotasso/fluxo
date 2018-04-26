@@ -3,8 +3,13 @@ import * as types from './../types';
 const homeMiddleware = ({ getState }) => next => (action) => {
   switch (action.type) {
     case types.ACTION_UPDATE:
-      action.value = `VALUE FROM MIDDLEWARE => ${action.value}`;
-      return next(action);
+      fetch('https://reqres.in/api/users')
+        .then(response => response.json())
+        .then((response) => {
+          action.value = `${response.data[0]['first_name']} => ${action.value}`;
+          next(action);
+        });
+      break;
 
     case types.ACTION_INCREMENT:
       const returnValue = next(action);
