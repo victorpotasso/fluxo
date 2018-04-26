@@ -1,10 +1,10 @@
-import { createStore } from './../lib';
+import { createStore, applyMiddleware } from './../lib';
 import reducers from './data/reducers';
 import middlewares from './data/middlewares';
 
 const store = createStore({
   reducers,
-  middlewares,
+  middlewares: applyMiddleware(...middlewares),
   initialState: {
     version: '1.0'
   },

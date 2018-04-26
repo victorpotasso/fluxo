@@ -22,7 +22,7 @@ class HomeView {
   }
 
   render() {
-    console.log('Home::render props', this.props);
+    // console.log('Home::render props', this.props);
     this.title.textContent = this.props.value1;
     this.count.textContent = this.props.value2;
   }
