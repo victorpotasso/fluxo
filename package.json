@@ -1,6 +1,6 @@
 {
-  "name": "fluxo",
-  "version": "0.0.1",
+  "name": "@victorpotasso/fluxo",
+  "version": "0.0.2",
   "description": "vanilla flux",
   "main": "build/index.js",
   "scripts": {
@@ -24,5 +24,9 @@
     "babel-preset-env": "^1.6.1",
     "lodash": "^4.17.10",
     "parcel-bundler": "^1.7.1"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {}
 }

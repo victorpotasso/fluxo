@@ -2,10 +2,13 @@
 
 A Vanilla FLUX library.
 
+## Install from npm
+```npm install --save @victorpotasso/fluxo```
+
 ## Create store
 
 ```
-import { createStore, applyMiddleware } from 'fluxo';
+import { createStore, applyMiddleware } from '@victorpotasso/fluxo';
 import reducers from './data/reducers';
 import middlewares from './data/middlewares';
 
@@ -20,7 +23,7 @@ export default store;
 
 ## Create a container connecting the component to the store
 ```
-import { connect } from 'fluxo';
+import { connect } from '@victorpotasso/fluxo';
 import * as selectors from './../data/selectors';
 import * as actions from './../data/actions';
 
