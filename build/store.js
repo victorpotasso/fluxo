@@ -10,8 +10,8 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function store({ reducers, middlewares, initialState = {} }) {
-  const state = Object.assign(initialState, reducers());
+function store(reducers, initialState = {}) {
+  let state = Object.assign(initialState, reducers());
   const listeners = [];
 
   return {
@@ -20,41 +20,30 @@ function store({ reducers, middlewares, initialState = {} }) {
     dispatch
 
     /**
-     * Private
+     * Public
      */
 
-  };function _deepUpdate(value, lastKey = '') {
-    if (_lodash2.default.isArray(value)) {
-      value.forEach((v, i) => {
-        if (v !== _lodash2.default.get(state, lastKey)[i]) {
-          const arrayKey = `${lastKey}[${i}]`;
-          _lodash2.default.set(state, arrayKey, v);
-        }
-      });
-    } else if (_lodash2.default.isObject(value)) {
-      for (let key in value) {
-        _deepUpdate(value[key], `${lastKey ? `${lastKey}.` : ''}${key}`);
-      }
-    } else if (_lodash2.default.get(state, lastKey) !== value) {
-      _lodash2.default.set(state, lastKey, value);
-    }
-  }
-
-  /**
-   * Public
-   */
-
-  function getState() {
+  };function getState() {
     return state;
   }
 
   function dispatch(action) {
-    _deepUpdate(reducers(state, action));
+    state = reducers(state, action);
     listeners.forEach(listener => listener());
   }
 
   function subscribe(listener) {
     listeners.push(listener);
+    let unsubscribed = false;
+
+    return function () {
+      if (!unsubscribed) {
+        subscribers.splice(subscribers.indexOf(listener), 1);
+        unsubscribed = true;
+        return true;
+      }
+      return false;
+    };
   }
 };
 

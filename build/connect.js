@@ -3,19 +3,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 function connect(mapStateToProps, mapDispatchToProps) {
-  const store = window.__fluxo__.store;
+  const { subscribe, dispatch, getState } = window.__fluxo__;
 
   return function (Component) {
     function Container(selector) {
       Component.call(this, selector);
-      store.subscribe(() => {
-        Container.prototype.props = Object.assign(Container.prototype.props, mapStateToProps(store.getState()));
+      subscribe(() => {
+        Container.prototype.props = _extends({}, Container.prototype.props, mapStateToProps(getState()));
         Component.prototype.render.call(this);
       });
     };
 
-    Container.prototype.props = Object.assign(mapStateToProps(store.getState()), mapDispatchToProps(store.dispatch, Component.prototype.props));
+    Container.prototype.props = _extends({}, mapStateToProps(getState()), mapDispatchToProps(dispatch, Component.prototype.props));
 
     Object.setPrototypeOf(Container.prototype, Component.prototype);
     return Container;
