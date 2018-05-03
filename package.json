@@ -1,6 +1,6 @@
 {
   "name": "@victorpotasso/fluxo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "vanilla flux",
   "main": "build/index.js",
   "scripts": {
