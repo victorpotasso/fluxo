@@ -10,8 +10,8 @@ function connect(mapStateToProps, mapDispatchToProps) {
   const { subscribe, dispatch, getState } = window.__fluxo__;
 
   return function (Component) {
-    function Container(selector) {
-      Component.call(this, selector);
+    function Container(...args) {
+      Component.call(this, ...args);
       Component.prototype.render.call(this);
 
       subscribe(() => {
