@@ -52,9 +52,9 @@ class SampleComponent {
   }
 }
 
-const mapStateToProps = state => ({
-  value1: `Sample: ${selectors.sample(state)}`,
-  value2: selectors.count(state),
+const mapStateToProps = getState => ({
+  value1: `Sample: ${selectors.sample(getState())}`,
+  value2: selectors.count(getState()),
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
