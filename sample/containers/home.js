@@ -10,6 +10,7 @@ class HomeView {
     this.button = this.el.querySelector('.btn-sample');
 
     this.button.addEventListener('click', this.onClick.bind(this));
+    this.button.style.display = null;
   }
 
   onClick() {
@@ -23,7 +24,7 @@ class HomeView {
   render() {
     console.log('Home::render props', this.props);
     this.title.textContent = this.props.value1;
-    this.count.textContent = this.props.value2;
+    this.count.textContent = `Count: ${this.props.value2}`;
   }
 }
 

@@ -1,7 +1,7 @@
 import * as types from './../types';
 
 const initalState = {
-  sample: 'initial',
+  sample: null,
   counter: {
     count: 0,
   }
