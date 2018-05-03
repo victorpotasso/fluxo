@@ -10,7 +10,6 @@ class HomeView {
     this.button = this.el.querySelector('.btn-sample');
 
     this.button.addEventListener('click', this.onClick.bind(this));
-    this.render();
   }
 
   onClick() {
@@ -22,15 +21,15 @@ class HomeView {
   }
 
   render() {
-    // console.log('Home::render props', this.props);
+    console.log('Home::render props', this.props);
     this.title.textContent = this.props.value1;
     this.count.textContent = this.props.value2;
   }
 }
 
-const mapStateToProps = state => ({
-  value1: `Sample: ${selectors.sample(state)}`,
-  value2: selectors.count(state),
+const mapStateToProps = getState => ({
+  value1: `Sample: ${selectors.sample(getState())}`,
+  value2: selectors.count(getState()),
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

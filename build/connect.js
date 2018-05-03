@@ -12,15 +12,18 @@ function connect(mapStateToProps, mapDispatchToProps) {
   return function (Component) {
     function Container(selector) {
       Component.call(this, selector);
+      Component.prototype.render.call(this);
+
       subscribe(() => {
-        Container.prototype.props = _extends({}, Container.prototype.props, mapStateToProps(getState()));
+        Container.prototype.props = _extends({}, Container.prototype.props, mapStateToProps(getState));
         Component.prototype.render.call(this);
       });
     };
 
-    Container.prototype.props = _extends({}, mapStateToProps(getState()), mapDispatchToProps(dispatch, Component.prototype.props));
+    Container.prototype.props = _extends({}, mapStateToProps(getState), mapDispatchToProps(dispatch, Component.prototype.props));
 
     Object.setPrototypeOf(Container.prototype, Component.prototype);
+
     return Container;
   };
 }
