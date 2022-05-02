@@ -1,9 +1,2 @@
-const initalState = {
-  test: 'testing',
-}
-
-function testReducer(state = initalState, action) {
-  return state;
-}
-
-export default testReducer;
+import{a}from"../../chunck/chunk-OGJJGWCT.js";import"../../chunck/chunk-CDAEANOT.js";export{a as default};
+//# sourceMappingURL=test.js.map

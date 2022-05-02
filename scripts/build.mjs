@@ -8,10 +8,13 @@ import esbuild from 'esbuild';
 
 async function build(options) {
     const dirname = path.dirname('../');
-    const absWorkingDir = path.resolve(dirname, 'lib');
-    const outdir = path.resolve(dirname, 'build/lib');
+    const absWorkingDir = path.resolve(dirname, 'src');
+    const outdir = path.resolve(dirname, 'build');
 
-    del([ 'build/lib/**/**' ]);
+    del([
+        'build//*.js',
+        'build/**/*.js'
+    ]);
 
     const entryPoints = await util.promisify(glob)('**/*.ts', { cwd: absWorkingDir });
 
@@ -20,7 +23,7 @@ async function build(options) {
         entryPoints,
         outdir,
         bundle: true,
-        chunkNames: 'lib/[name]-[hash]',
+        chunkNames: 'chunck/[name]-[hash]',
         charset: 'utf8',
         format: 'esm',
         logLevel: 'info',

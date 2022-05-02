@@ -1,15 +1,2 @@
-import store from './store.js';
-// import Home from './containers/home.js';
-import * as actions from './data/actions.js';
-
-// fake loading
-setTimeout(() => {
-    console.log('>>>', store.getState().home.sample);
-    store.dispatch(actions.update('first update'));
-    store.subscribe(() => {
-        console.log('<<<', store.getState().home.sample);
-    });
-
-    // const home = new Home('section#home-view');
-    // console.log({ home });
-}, 2000);
+import{a as t}from"./chunck/chunk-POTXCFEZ.js";import{a as e}from"./chunck/chunk-LTJ4UEV5.js";import"./chunck/chunk-YQMOGBEM.js";import"./chunck/chunk-QS57KWVV.js";import"./chunck/chunk-6LX5PH5M.js";import"./chunck/chunk-L5GR5Y44.js";import"./chunck/chunk-BA3WV2FF.js";import"./chunck/chunk-AUP2KQUP.js";import"./chunck/chunk-OACLIDMX.js";import"./chunck/chunk-LODLXAD2.js";import"./chunck/chunk-SKEIZTI4.js";import"./chunck/chunk-VB7PGLPQ.js";import"./chunck/chunk-IA6SUDMT.js";import"./chunck/chunk-XA33BQCL.js";import"./chunck/chunk-OGJJGWCT.js";import"./chunck/chunk-CDAEANOT.js";setTimeout(()=>{console.log(">>>",t.getState().home.sample),t.dispatch(e("first update")),t.subscribe(()=>{console.log("<<<",t.getState().home.sample)})},2e3);
+//# sourceMappingURL=sample.js.map

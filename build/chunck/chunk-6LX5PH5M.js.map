@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/middlewares/logger.ts"],
+  "sourcesContent": ["export default ({ getState }) => next => action => {\n    const console = window.console;\n    const prevState = getState();\n    const returnValue = next(action);\n    const nextState = getState();\n    const actionType = String(action.type);\n    const message = `action ${actionType}`;\n\n    console.group(action.type);\n    console.log(`%c prev state`, `color: #9E9E9E`, prevState);\n    console.log(`%c action`, `color: #03A9F4`, action);\n    console.log(`%c next state`, `color: #4CAF50`, nextState);\n    console.groupEnd();\n\n    return returnValue;\n};"],
+  "mappings": "AAAA,GAAO,GAAQ,CAAC,CAAE,cAAe,GAAQ,GAAU,CAC/C,GAAM,GAAU,OAAO,QACjB,EAAY,EAAS,EACrB,EAAc,EAAK,CAAM,EACzB,EAAY,EAAS,EAErB,EAAU,UADG,OAAO,EAAO,IAAI,IAGrC,SAAQ,MAAM,EAAO,IAAI,EACzB,EAAQ,IAAI,gBAAiB,iBAAkB,CAAS,EACxD,EAAQ,IAAI,YAAa,iBAAkB,CAAM,EACjD,EAAQ,IAAI,gBAAiB,iBAAkB,CAAS,EACxD,EAAQ,SAAS,EAEV,CACX",
+  "names": []
+}

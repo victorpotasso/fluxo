@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/selectors.ts"],
+  "sourcesContent": ["\nexport const home = (state) => state.home;\nexport const sample = (state) => home(state).sample;\nexport const counter = (state) => home(state).counter;\nexport const count = (state) => counter(state).count;\n"],
+  "mappings": "oCACO,GAAM,GAAO,AAAC,GAAU,EAAM,KACxB,EAAS,AAAC,GAAU,EAAK,CAAK,EAAE,OAChC,EAAU,AAAC,GAAU,EAAK,CAAK,EAAE,QACjC,EAAQ,AAAC,GAAU,EAAQ,CAAK,EAAE",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/reducers/test.ts"],
+  "sourcesContent": ["const initalState = {\n    test: 'testing',\n}\n\nfunction testReducer(state = initalState, _action) {\n    return state;\n}\n\nexport default testReducer;\n"],
+  "mappings": "AAAA,GAAM,GAAc,CAChB,KAAM,SACV,EAEA,WAAqB,EAAQ,EAAa,EAAS,CAC/C,MAAO,EACX,CAEA,GAAO,GAAQ",
+  "names": []
+}

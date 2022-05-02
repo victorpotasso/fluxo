@@ -1,13 +1,2 @@
-import { combineReducers } from '../../../lib/index.js';
-import homeReducer from './home.js';
-import testReducer from './test.js';
-
-const reducers = [
-  homeReducer,
-  testReducer,
-];
-
-export default combineReducers({
-  home: homeReducer,
-  test: testReducer,
-});;
+import{a}from"../../chunck/chunk-L5GR5Y44.js";import"../../chunck/chunk-BA3WV2FF.js";import"../../chunck/chunk-AUP2KQUP.js";import"../../chunck/chunk-OACLIDMX.js";import"../../chunck/chunk-LODLXAD2.js";import"../../chunck/chunk-SKEIZTI4.js";import"../../chunck/chunk-VB7PGLPQ.js";import"../../chunck/chunk-IA6SUDMT.js";import"../../chunck/chunk-XA33BQCL.js";import"../../chunck/chunk-OGJJGWCT.js";import"../../chunck/chunk-CDAEANOT.js";export{a as default};
+//# sourceMappingURL=index.js.map

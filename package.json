@@ -2,7 +2,7 @@
     "name": "@victorpotasso/fluxo",
     "version": "0.0.6",
     "description": "vanilla flux",
-    "main": "build/index.js",
+    "main": "src/lib/index.ts",
     "scripts": {
         "build": "node ./scripts/build.mjs",
         "serve": "node ./scripts/serve.mjs"

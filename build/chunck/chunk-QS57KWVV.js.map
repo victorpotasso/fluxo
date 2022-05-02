@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/middlewares/home.ts"],
+  "sourcesContent": ["import * as types from '../types';\n\nconst homeMiddleware = ({\n    getState\n}) => next => (action) => {\n    switch (action.type) {\n        case types.ACTION_UPDATE:\n            fetch('https://reqres.in/api/users')\n                .then(response => response.json())\n                .then((response) => {\n                    action.value = `${response.data[0]['first_name']} => ${action.value}`;\n                    next(action);\n                });\n            break;\n\n        case types.ACTION_INCREMENT:\n            const returnValue = next(action);\n            console.log('incrementing...', getState().home.counter.count)\n            return returnValue;\n\n        default:\n            return next(action);\n    }\n};\n\nexport default homeMiddleware;\n"],
+  "mappings": "+CAEA,GAAM,GAAiB,CAAC,CACpB,cACE,GAAQ,AAAC,GAAW,CACtB,OAAQ,EAAO,UACA,GACP,MAAM,6BAA6B,EAC9B,KAAK,GAAY,EAAS,KAAK,CAAC,EAChC,KAAK,AAAC,GAAa,CAChB,EAAO,MAAQ,GAAG,EAAS,KAAK,GAAG,iBAAoB,EAAO,QAC9D,EAAK,CAAM,CACf,CAAC,EACL,UAEO,GACP,GAAM,GAAc,EAAK,CAAM,EAC/B,eAAQ,IAAI,kBAAmB,EAAS,EAAE,KAAK,QAAQ,KAAK,EACrD,UAGP,MAAO,GAAK,CAAM,EAE9B,EAEO,EAAQ",
+  "names": []
+}

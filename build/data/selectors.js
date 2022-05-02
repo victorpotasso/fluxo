@@ -1,5 +1,2 @@
-
-export const home = (state) => state.home;
-export const sample = (state) => home(state).sample;
-export const counter = (state) => home(state).counter;
-export const count = (state) => counter(state).count;
+import"../chunck/chunk-CDAEANOT.js";var t=o=>o.home,c=o=>t(o).sample,e=o=>t(o).counter,n=o=>e(o).count;export{n as count,e as counter,t as home,c as sample};
+//# sourceMappingURL=selectors.js.map

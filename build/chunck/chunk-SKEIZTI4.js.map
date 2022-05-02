@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "sources": ["../../../lib/createStore.ts"],
+  "sources": ["../../src/lib/createStore.ts"],
   "sourcesContent": ["// import store from './old_store';\nimport store from './store';\n\nfunction createStore({ reducers, middlewares, initialState }) {\n  const s = middlewares(store)(reducers, initialState);\n\n  window.__fluxo__ = s;\n  return s;\n}\n\nexport default createStore;\n"],
   "mappings": "wCAGA,WAAqB,CAAE,WAAU,cAAa,gBAAgB,CAC5D,GAAM,GAAI,EAAY,CAAK,EAAE,EAAU,CAAY,EAEnD,cAAO,UAAY,EACZ,CACT,CAEA,GAAO,GAAQ",
   "names": []

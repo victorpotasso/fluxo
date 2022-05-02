@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/types.ts"],
+  "sourcesContent": ["export const ACTION_UPDATE = 'ACTION_UPDATE';\nexport const ACTION_INCREMENT = 'ACTION_INCREMENT';"],
+  "mappings": "AAAO,GAAM,GAAgB,gBAChB,EAAmB",
+  "names": []
+}

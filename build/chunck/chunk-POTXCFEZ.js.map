@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/store.ts"],
+  "sourcesContent": ["import { createStore, applyMiddleware } from './lib';\nimport reducers from './data/reducers';\nimport middlewares from './data/middlewares';\n\nconst store = createStore({\n    reducers,\n    middlewares: applyMiddleware(...middlewares),\n    initialState: {\n        version: '1.0'\n    },\n});\n\nexport default store;\n"],
+  "mappings": "gKAIA,GAAM,GAAQ,EAAY,CACtB,WACA,YAAa,EAAgB,GAAG,CAAW,EAC3C,aAAc,CACV,QAAS,KACb,CACJ,CAAC,EAEM,EAAQ",
+  "names": []
+}

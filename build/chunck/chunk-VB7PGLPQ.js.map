@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "sources": ["../../../lib/store.ts"],
+  "sources": ["../../src/lib/store.ts"],
   "sourcesContent": ["import _ from 'lodash';\n\nfunction store(reducers, initialState = {}) {\n  let state = Object.assign(\n    initialState,\n    reducers()\n  );\n  const listeners = [];\n\n  return {\n    subscribe,\n    getState,\n    dispatch,\n  }\n\n  /**\n   * Public\n   */\n\n  function getState() {\n    return state;\n  }\n\n  function dispatch(action) {\n    state = reducers(state, action);\n    listeners.forEach(listener => listener());\n  }\n\n  function subscribe(listener) {\n    listeners.push(listener);\n    let unsubscribed = false;\n\n    return function () {\n      if (!unsubscribed) {\n        subscribers.splice(subscribers.indexOf(listener), 1);\n        unsubscribed = true;\n        return true;\n      }\n      return false;\n    };\n  }\n};\n\nexport default store;\n"],
   "mappings": "AAEA,WAAe,EAAU,EAAe,CAAC,EAAG,CAC1C,GAAI,GAAQ,OAAO,OACjB,EACA,EAAS,CACX,EACM,EAAY,CAAC,EAEnB,MAAO,CACL,YACA,WACA,UACF,EAMA,YAAoB,CAClB,MAAO,EACT,CAEA,WAAkB,EAAQ,CACxB,EAAQ,EAAS,EAAO,CAAM,EAC9B,EAAU,QAAQ,GAAY,EAAS,CAAC,CAC1C,CAEA,WAAmB,EAAU,CAC3B,EAAU,KAAK,CAAQ,EACvB,GAAI,GAAe,GAEnB,MAAO,WAAY,CACjB,MAAK,GAKE,GAJL,aAAY,OAAO,YAAY,QAAQ,CAAQ,EAAG,CAAC,EACnD,EAAe,GACR,GAGX,CACF,CACF,CAEA,GAAO,GAAQ",
   "names": []

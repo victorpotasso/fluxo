@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/actions.ts"],
+  "sourcesContent": ["import * as types from './types';\n\nexport const update = (value) => ({\n    type: types.ACTION_UPDATE,\n    value,\n});\nexport const increment = () => ({\n    type: types.ACTION_INCREMENT,\n});\n"],
+  "mappings": "+CAEO,GAAM,GAAS,AAAC,GAAW,EAC9B,KAAY,EACZ,OACJ,GACa,EAAY,IAAO,EAC5B,KAAY,CAChB",
+  "names": []
+}

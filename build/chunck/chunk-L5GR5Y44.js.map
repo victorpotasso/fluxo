@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/reducers/index.ts"],
+  "sourcesContent": ["import { combineReducers } from '../../lib';\nimport homeReducer from './home';\nimport testReducer from './test';\n\nconst reducers = [\n    homeReducer,\n    testReducer,\n];\n\nexport default combineReducers({\n    home: homeReducer,\n    test: testReducer,\n});;\n"],
+  "mappings": "wHASA,GAAO,GAAQ,EAAgB,CAC3B,KAAM,EACN,KAAM,CACV,CAAC",
+  "names": []
+}

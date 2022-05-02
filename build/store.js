@@ -1,13 +1,2 @@
-import { createStore, applyMiddleware } from '../lib/index.js';
-import reducers from './data/reducers/index.js';
-import middlewares from './data/middlewares/index.js';
-
-const store = createStore({
-  reducers,
-  middlewares: applyMiddleware(...middlewares),
-  initialState: {
-    version: '1.0'
-  },
-});
-
-export default store;
+import{a}from"./chunck/chunk-POTXCFEZ.js";import"./chunck/chunk-YQMOGBEM.js";import"./chunck/chunk-QS57KWVV.js";import"./chunck/chunk-6LX5PH5M.js";import"./chunck/chunk-L5GR5Y44.js";import"./chunck/chunk-BA3WV2FF.js";import"./chunck/chunk-AUP2KQUP.js";import"./chunck/chunk-OACLIDMX.js";import"./chunck/chunk-LODLXAD2.js";import"./chunck/chunk-SKEIZTI4.js";import"./chunck/chunk-VB7PGLPQ.js";import"./chunck/chunk-IA6SUDMT.js";import"./chunck/chunk-XA33BQCL.js";import"./chunck/chunk-OGJJGWCT.js";import"./chunck/chunk-CDAEANOT.js";export{a as default};
+//# sourceMappingURL=store.js.map

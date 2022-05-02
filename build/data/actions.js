@@ -1,9 +1,2 @@
-import * as types from './types.js';
-
-export const update = (value) => ({
-  type: types.ACTION_UPDATE,
-  value,
-});
-export const increment = () => ({
-  type: types.ACTION_INCREMENT,
-});
+import{a,b}from"../chunck/chunk-LTJ4UEV5.js";import"../chunck/chunk-XA33BQCL.js";import"../chunck/chunk-CDAEANOT.js";export{b as increment,a as update};
+//# sourceMappingURL=actions.js.map

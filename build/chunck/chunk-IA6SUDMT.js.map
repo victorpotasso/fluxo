@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/reducers/home.ts"],
+  "sourcesContent": ["import * as types from '../types';\n\nconst initalState = {\n    sample: null,\n    counter: {\n        count: 0,\n    }\n}\n\nfunction homeReducer(state = initalState, action) {\n    switch (action.type) {\n        case types.ACTION_UPDATE:\n            return Object.assign({},\n                state, {\n                    sample: action.value,\n                }\n            );\n        case types.ACTION_INCREMENT:\n            return Object.assign({},\n                state, {\n                    counter: {\n                        count: state.counter.count + 1,\n                    }\n                }\n            );\n        default:\n            return state;\n    }\n}\n\nexport default homeReducer;\n"],
+  "mappings": "+CAEA,GAAM,GAAc,CAChB,OAAQ,KACR,QAAS,CACL,MAAO,CACX,CACJ,EAEA,WAAqB,EAAQ,EAAa,EAAQ,CAC9C,OAAQ,EAAO,UACA,GACP,MAAO,QAAO,OAAO,CAAC,EAClB,EAAO,CACH,OAAQ,EAAO,KACnB,CACJ,MACO,GACP,MAAO,QAAO,OAAO,CAAC,EAClB,EAAO,CACH,QAAS,CACL,MAAO,EAAM,QAAQ,MAAQ,CACjC,CACJ,CACJ,UAEA,MAAO,GAEnB,CAEA,GAAO,GAAQ",
+  "names": []
+}

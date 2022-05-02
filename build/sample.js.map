@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/sample.ts"],
+  "sourcesContent": ["import store from './store';\n// import Home from './containers/home';\nimport * as actions from './data/actions';\n\n// fake loading\nsetTimeout(() => {\n    console.log('>>>', store.getState().home.sample);\n    store.dispatch(actions.update('first update'));\n    store.subscribe(() => {\n        console.log('<<<', store.getState().home.sample);\n    });\n\n    // const home = new Home('section#home-view');\n    // console.log({ home });\n}, 2000);\n"],
+  "mappings": "wkBAKA,WAAW,IAAM,CACb,QAAQ,IAAI,MAAO,EAAM,SAAS,EAAE,KAAK,MAAM,EAC/C,EAAM,SAAS,AAAQ,EAAO,cAAc,CAAC,EAC7C,EAAM,UAAU,IAAM,CAClB,QAAQ,IAAI,MAAO,EAAM,SAAS,EAAE,KAAK,MAAM,CACnD,CAAC,CAIL,EAAG,GAAI",
+  "names": []
+}

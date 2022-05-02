@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/data/middlewares/index.ts"],
+  "sourcesContent": ["import homeMiddleware from './home';\nimport logger from './logger';\n\n\n\nconst middlewares = [\n    logger,\n    homeMiddleware,\n];\n\nexport default middlewares;\n"],
+  "mappings": "gFAKA,GAAM,GAAc,CAChB,EACA,CACJ,EAEO,EAAQ",
+  "names": []
+}

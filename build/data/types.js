@@ -1,2 +1,2 @@
-export const ACTION_UPDATE = 'ACTION_UPDATE';
-export const ACTION_INCREMENT = 'ACTION_INCREMENT';
+import{a,b}from"../chunck/chunk-XA33BQCL.js";import"../chunck/chunk-CDAEANOT.js";export{b as ACTION_INCREMENT,a as ACTION_UPDATE};
+//# sourceMappingURL=types.js.map
