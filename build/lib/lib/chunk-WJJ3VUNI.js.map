@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../lib/combineReducers.ts"],
+  "sourcesContent": ["function combineReducers(reducers) {\n  return (state = {}, action = {}) => {\n    return Object.keys(reducers).reduce((nextState, key) => {\n      nextState[key] = reducers[key](\n        state[key],\n        action,\n      );\n      return nextState;\n    },\n    {});\n  }\n}\n\nexport default combineReducers;"],
+  "mappings": "AAAA,WAAyB,EAAU,CACjC,MAAO,CAAC,EAAQ,CAAC,EAAG,EAAS,CAAC,IACrB,OAAO,KAAK,CAAQ,EAAE,OAAO,CAAC,EAAW,IAC9C,GAAU,GAAO,EAAS,GACxB,EAAM,GACN,CACF,EACO,GAET,CAAC,CAAC,CAEN,CAEA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,32 +1,32 @@
 {
-  "name": "@victorpotasso/fluxo",
-  "version": "0.0.5",
-  "description": "vanilla flux",
-  "main": "build/index.js",
-  "scripts": {
-    "start": "parcel sample/index.html  --open",
-    "build": "babel ./lib --out-dir ./build",
-    "prepublish": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/victorpotasso/fluxo.git"
-  },
-  "author": "Victor Potasso <victorpotasso@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/victorpotasso/fluxo/issues"
-  },
-  "homepage": "https://github.com/victorpotasso/fluxo#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "lodash": "^4.17.10",
-    "parcel-bundler": "^1.7.1"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "dependencies": {}
+    "name": "@victorpotasso/fluxo",
+    "version": "0.0.6",
+    "description": "vanilla flux",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "node ./scripts/build.mjs",
+        "serve": "node ./scripts/serve.mjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/victorpotasso/fluxo.git"
+    },
+    "author": "Victor Potasso <victorpotasso@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/victorpotasso/fluxo/issues"
+    },
+    "homepage": "https://github.com/victorpotasso/fluxo#readme",
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.27.9",
+        "del": "^6.0.0",
+        "esbuild": "^0.14.38",
+        "glob": "^8.0.1"
+    }
 }
